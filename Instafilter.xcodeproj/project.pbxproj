@@ -13,6 +13,7 @@
 		52EDC3792B20C76A00E3E26D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EDC3782B20C76A00E3E26D /* Preview Assets.xcassets */; };
 		52EDC3802B20C83100E3E26D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EDC37F2B20C83100E3E26D /* Launch Screen.storyboard */; };
 		52EDC3832B21101100E3E26D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDC3822B21101100E3E26D /* BlurView.swift */; };
+		52EDC3852B2118F900E3E26D /* ConfirmationDialogExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDC3842B2118F900E3E26D /* ConfirmationDialogExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		52EDC3782B20C76A00E3E26D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52EDC37F2B20C83100E3E26D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		52EDC3822B21101100E3E26D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		52EDC3842B2118F900E3E26D /* ConfirmationDialogExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				52EDC3822B21101100E3E26D /* BlurView.swift */,
+				52EDC3842B2118F900E3E26D /* ConfirmationDialogExampleView.swift */,
 			);
 			path = TutorialFiles;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				52EDC3742B20C76900E3E26D /* ContentView.swift in Sources */,
 				52EDC3722B20C76900E3E26D /* InstafilterApp.swift in Sources */,
+				52EDC3852B2118F900E3E26D /* ConfirmationDialogExampleView.swift in Sources */,
 				52EDC3832B21101100E3E26D /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
