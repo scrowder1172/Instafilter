@@ -12,6 +12,7 @@
 		52EDC3762B20C76A00E3E26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EDC3752B20C76A00E3E26D /* Assets.xcassets */; };
 		52EDC3792B20C76A00E3E26D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EDC3782B20C76A00E3E26D /* Preview Assets.xcassets */; };
 		52EDC3802B20C83100E3E26D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EDC37F2B20C83100E3E26D /* Launch Screen.storyboard */; };
+		52EDC3832B21101100E3E26D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDC3822B21101100E3E26D /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		52EDC3752B20C76A00E3E26D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52EDC3782B20C76A00E3E26D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52EDC37F2B20C83100E3E26D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		52EDC3822B21101100E3E26D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				52EDC3732B20C76900E3E26D /* ContentView.swift */,
 				52EDC37F2B20C83100E3E26D /* Launch Screen.storyboard */,
 				52EDC3752B20C76A00E3E26D /* Assets.xcassets */,
+				52EDC3812B210FF500E3E26D /* TutorialFiles */,
 				52EDC3772B20C76A00E3E26D /* Preview Content */,
 			);
 			path = Instafilter;
@@ -68,6 +71,14 @@
 				52EDC3782B20C76A00E3E26D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52EDC3812B210FF500E3E26D /* TutorialFiles */ = {
+			isa = PBXGroup;
+			children = (
+				52EDC3822B21101100E3E26D /* BlurView.swift */,
+			);
+			path = TutorialFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				52EDC3742B20C76900E3E26D /* ContentView.swift in Sources */,
 				52EDC3722B20C76900E3E26D /* InstafilterApp.swift in Sources */,
+				52EDC3832B21101100E3E26D /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
