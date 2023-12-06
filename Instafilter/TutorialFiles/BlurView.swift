@@ -9,7 +9,11 @@ import SwiftUI
 
 struct BlurView: View {
     
-    @State private var blurAmount: Double = 0.0
+    @State private var blurAmount: Double = 0.0 {
+        didSet {
+            print("Blur value change via @State: \(blurAmount)")
+        }
+    }
     
     var body: some View {
         VStack {
@@ -27,6 +31,9 @@ struct BlurView: View {
             .frame(width: 200, height: 50)
             .background(.yellow)
             .clipShape(.rect(cornerRadius: 10))
+            .onChange(of: blurAmount) { oldValue, newValue in
+                print("Blur value change via onChange Modifier: old value(\(oldValue) new value (\(newValue)")
+            }
             
             Button("Show Message") {
                 blurAmount = 0.0
