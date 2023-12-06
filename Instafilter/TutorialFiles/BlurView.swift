@@ -32,7 +32,7 @@ struct BlurView: View {
             .background(.yellow)
             .clipShape(.rect(cornerRadius: 10))
             .onChange(of: blurAmount) { oldValue, newValue in
-                print("Blur value change via onChange Modifier: old value(\(oldValue) new value (\(newValue)")
+                print("Blur value (\(blurAmount)) change via onChange Modifier: old value(\(oldValue)) new value (\(newValue))")
             }
             
             Button("Show Message") {
