@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520D15C62B27B1E900D627A3 /* ContentUnavailableExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D15C52B27B1E900D627A3 /* ContentUnavailableExample.swift */; };
 		52AAC5CC2B2378D900E406EC /* CoreImageExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAC5CB2B2378D900E406EC /* CoreImageExampleView.swift */; };
 		52EDC3722B20C76900E3E26D /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDC3712B20C76900E3E26D /* InstafilterApp.swift */; };
 		52EDC3742B20C76900E3E26D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDC3732B20C76900E3E26D /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520D15C52B27B1E900D627A3 /* ContentUnavailableExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableExample.swift; sourceTree = "<group>"; };
 		52AAC5CB2B2378D900E406EC /* CoreImageExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageExampleView.swift; sourceTree = "<group>"; };
 		52EDC36E2B20C76900E3E26D /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EDC3712B20C76900E3E26D /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				52EDC3822B21101100E3E26D /* BlurView.swift */,
 				52EDC3842B2118F900E3E26D /* ConfirmationDialogExampleView.swift */,
 				52AAC5CB2B2378D900E406EC /* CoreImageExampleView.swift */,
+				520D15C52B27B1E900D627A3 /* ContentUnavailableExample.swift */,
 			);
 			path = TutorialFiles;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				52EDC3742B20C76900E3E26D /* ContentView.swift in Sources */,
 				52AAC5CC2B2378D900E406EC /* CoreImageExampleView.swift in Sources */,
 				52EDC3722B20C76900E3E26D /* InstafilterApp.swift in Sources */,
+				520D15C62B27B1E900D627A3 /* ContentUnavailableExample.swift in Sources */,
 				52EDC3852B2118F900E3E26D /* ConfirmationDialogExampleView.swift in Sources */,
 				52EDC3832B21101100E3E26D /* BlurView.swift in Sources */,
 			);
