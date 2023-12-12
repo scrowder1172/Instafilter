@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5207FAB02B28F49600972204 /* PhotoLibraryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207FAAF2B28F49600972204 /* PhotoLibraryExample.swift */; };
 		520D15C62B27B1E900D627A3 /* ContentUnavailableExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D15C52B27B1E900D627A3 /* ContentUnavailableExample.swift */; };
 		52AAC5CC2B2378D900E406EC /* CoreImageExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAC5CB2B2378D900E406EC /* CoreImageExampleView.swift */; };
 		52EDC3722B20C76900E3E26D /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDC3712B20C76900E3E26D /* InstafilterApp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5207FAAF2B28F49600972204 /* PhotoLibraryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryExample.swift; sourceTree = "<group>"; };
 		520D15C52B27B1E900D627A3 /* ContentUnavailableExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableExample.swift; sourceTree = "<group>"; };
 		52AAC5CB2B2378D900E406EC /* CoreImageExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageExampleView.swift; sourceTree = "<group>"; };
 		52EDC36E2B20C76900E3E26D /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				52EDC3842B2118F900E3E26D /* ConfirmationDialogExampleView.swift */,
 				52AAC5CB2B2378D900E406EC /* CoreImageExampleView.swift */,
 				520D15C52B27B1E900D627A3 /* ContentUnavailableExample.swift */,
+				5207FAAF2B28F49600972204 /* PhotoLibraryExample.swift */,
 			);
 			path = TutorialFiles;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5207FAB02B28F49600972204 /* PhotoLibraryExample.swift in Sources */,
 				52EDC3742B20C76900E3E26D /* ContentView.swift in Sources */,
 				52AAC5CC2B2378D900E406EC /* CoreImageExampleView.swift in Sources */,
 				52EDC3722B20C76900E3E26D /* InstafilterApp.swift in Sources */,
