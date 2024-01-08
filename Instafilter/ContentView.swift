@@ -28,8 +28,6 @@ struct ContentView: View {
     @State private var filterIntensity: Float = 0.5
     @State private var selectedItem: PhotosPickerItem?
     
-    @State private var noImageSelected: Bool = true
-    
     @State private var showingFilters: Bool = false
     @State private var currentFilterName: String = FilterNames.sepia.rawValue
     
@@ -104,7 +102,7 @@ struct ContentView: View {
                         .onChange(of: filterIntensity, applyImageProcessing)
                 }
                 .padding(.vertical)
-                .disabled(noImageSelected)
+                .disabled(processedImage == nil)
                 
                 HStack {
                     Button("Change filter", action: changeFilter)
@@ -115,7 +113,7 @@ struct ContentView: View {
                         ShareLink(item: processedImage, preview: SharePreview("InstaFilter Image", image: processedImage))
                     }
                 }
-                .disabled(noImageSelected)
+                .disabled(processedImage == nil)
             }
             .navigationTitle("InstaFilter")
             .padding([.horizontal, .bottom])
@@ -160,7 +158,6 @@ struct ContentView: View {
             applyImageProcessing()
             
             originalImage = Image(uiImage: inputImage)
-            noImageSelected = false
         }
     }
     
