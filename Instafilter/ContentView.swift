@@ -16,9 +16,12 @@ struct ContentView: View {
     enum FilterNames: String {
         case sepia = "Sepia Tone"
         case crystalize = "Crystalize"
+        case bloom = "Bloom"
         case edges = "Edges"
         case gaussianBlur = "Gaussian Blur"
         case pixellate = "Pixellate"
+        case pointillize = "Pointillize"
+        case noir = "Noir"
         case unsharpMask = "Unsharp Mask"
         case vignette = "Vignette"
     }
@@ -26,6 +29,8 @@ struct ContentView: View {
     @State private var processedImage: Image?
     @State private var originalImage: Image?
     @State private var filterIntensity: Float = 0.5
+    @State private var filterRadius: Float = 3.0
+    @State private var filterScale: Float = 5.0
     @State private var selectedItem: PhotosPickerItem?
     
     @State private var showingFilters: Bool = false
@@ -96,13 +101,37 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                HStack {
-                    Text("Intensity")
-                    Slider(value: $filterIntensity)
-                        .onChange(of: filterIntensity, applyImageProcessing)
+                VStack {
+                    if currentFilter.inputKeys.contains(kCIInputIntensityKey) {
+                        HStack {
+                            Text("Intensity")
+                            Slider(value: $filterIntensity)
+                                .onChange(of: filterIntensity, applyImageProcessing)
+                        }
+                        .padding(.top)
+                        .disabled(processedImage == nil)
+                    }
+                    
+                    if currentFilter.inputKeys.contains(kCIInputRadiusKey) {
+                        HStack {
+                            Text("Radius")
+                            Slider(value: $filterRadius, in: 0...200)
+                                .onChange(of: filterRadius, applyImageProcessing)
+                        }
+                        .disabled(processedImage == nil)
+                    }
+                    
+                    if currentFilter.inputKeys.contains(kCIInputScaleKey) {
+                        HStack {
+                            Text("Scale")
+                            Slider(value: $filterScale, in: 0...10)
+                                .onChange(of: filterScale, applyImageProcessing)
+                        }
+                        .padding(.bottom)
+                        .disabled(processedImage == nil)
+                    }
                 }
                 .padding(.vertical)
-                .disabled(processedImage == nil)
                 
                 HStack {
                     Button("Change filter", action: changeFilter)
@@ -122,13 +151,22 @@ struct ContentView: View {
                     setFilter(CIFilter.crystallize(), filterName: FilterNames.crystalize)
                 }
                 Button(FilterNames.edges.rawValue) {
-                    setFilter(CIFilter.edges(), filterName: FilterNames.crystalize)
+                    setFilter(CIFilter.edges(), filterName: FilterNames.edges)
+                }
+                Button(FilterNames.bloom.rawValue) {
+                    setFilter(CIFilter.bloom(), filterName: FilterNames.bloom)
                 }
                 Button(FilterNames.gaussianBlur.rawValue) {
                     setFilter(CIFilter.gaussianBlur(), filterName: FilterNames.gaussianBlur)
                 }
                 Button(FilterNames.pixellate.rawValue) {
                     setFilter(CIFilter.pixellate(), filterName: FilterNames.pixellate)
+                }
+                Button(FilterNames.pointillize.rawValue) {
+                    setFilter(CIFilter.pointillize(), filterName: FilterNames.pointillize)
+                }
+                Button(FilterNames.noir.rawValue) {
+                    setFilter(CIFilter.photoEffectNoir(), filterName: FilterNames.noir)
                 }
                 Button(FilterNames.sepia.rawValue) {
                     setFilter(CIFilter.sepiaTone(), filterName: FilterNames.sepia)
@@ -172,10 +210,10 @@ struct ContentView: View {
             currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
         }
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(filterRadius, forKey: kCIInputRadiusKey)
         }
         if inputKeys.contains(kCIInputScaleKey) {
-            currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey)
+            currentFilter.setValue(filterScale, forKey: kCIInputScaleKey)
         }
         
         guard let outputImage = currentFilter.outputImage else { return }
